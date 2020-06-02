@@ -15,6 +15,8 @@
 export default {
 async asyncData({$axios}) {
   const users = await $axios.$get('https://jsonplaceholder.typicode.com/users')
+  console.log(users);
+
   return {users}
 },
   data() {
@@ -24,8 +26,8 @@ async asyncData({$axios}) {
   },
   methods: {
     openUser(user) {
-      this.$router.push('/users/' + user.id)
 
+      this.$router.push('/users/' + user.id)
     }
   }
 }
