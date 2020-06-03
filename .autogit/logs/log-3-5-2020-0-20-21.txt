@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 03 2020 00:20:21 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* pages/users/index.vue
+
+
+Created files:
+* store/users.js
+
+
+Deleted files:
+
+
+Renamed files:
