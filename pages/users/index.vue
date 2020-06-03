@@ -26,6 +26,7 @@ async asyncData({$axios}) {
   },
   methods: {
     openUser(user) {
+console.log(user);
 
       this.$router.push('/users/' + user.id)
     }
