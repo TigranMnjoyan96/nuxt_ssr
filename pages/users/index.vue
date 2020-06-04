@@ -4,7 +4,7 @@
 
     <ul>
       <li v-for="user of users" :key="user.id">
-        <a href="#" @click.prevent="openUser(user)">{{user.name}}</a>
+        <a href="#" @click.prevent="openUser(user)">{{user.title}}</a>
       </li>
     </ul>
   </section>
@@ -13,9 +13,9 @@
 
 <script>
 export default {
-async asyncData({$axios}) {
-  const users = await $axios.$get('https://jsonplaceholder.typicode.com/users')
-  console.log(users);
+async asyncData() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+const users = await res.json()
 
   return {users}
 },
@@ -26,8 +26,6 @@ async asyncData({$axios}) {
   },
   methods: {
     openUser(user) {
-console.log(user);
-
       this.$router.push('/users/' + user.id)
     }
   }
