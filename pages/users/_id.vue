@@ -8,9 +8,7 @@
 
 <script>
 export default {
-  // validate({params}) {
-  //   return /^\d+$/.test(params.id)
-  // },
+  // validat
   async asyncData() {
 console.log(this.$route.params.id, 'dj');
 
